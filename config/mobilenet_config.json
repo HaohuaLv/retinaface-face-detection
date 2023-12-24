@@ -1,0 +1,12 @@
+{
+    "feature_extrator_kwargs": {
+        "model_name": "mobilenetv2_050", 
+        "features_only": true,
+        "pretrained": true, 
+        "out_indices": [2, 3, 4]
+    }, 
+    "fpn_out_channels": 64, 
+    "anchors_ratios": [[2, 4], [4, 8], [8, 16]], 
+    "image_size": [840, 840], 
+    "lb_loss_weights": [10, 1]
+}
