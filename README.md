@@ -1,4 +1,4 @@
-# Retinaface Face Detection 
+# [Retinaface Face Detection](https://github.com/HaohuaLv/retinaface-face-detection)
 
 A retinaface model for Face Detection trained on widerface dataset.
 
@@ -12,7 +12,7 @@ python train.py --model_config_file <MODEL_CONFIG_FILE>
 <MODEL_CONFIG_FILE> can be found in folder `config`.
 Model checkpoints will be saved in folder `checkpoints` by default.
 
-backbone-ResNet50 checkpoint can be download in my [google drive](https://drive.google.com/drive/folders/1teN75lXOvYPLdpzLoXPEPrsXfZJU18Id?usp=sharing).
+backbone-ResNet50 checkpoint can be download in my [Google Drive](https://drive.google.com/drive/folders/1teN75lXOvYPLdpzLoXPEPrsXfZJU18Id?usp=sharing) or [HuggingFace🤗](https://huggingface.co/HaohuaLv/retina-backbone_resnet50-ft_widerface).
 
 ## Inference
 ### Observe logits map and predicted bboxes
