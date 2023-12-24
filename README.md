@@ -2,7 +2,7 @@
 
 A retinaface model for Face Detection trained on widerface dataset.
 
-`Notice` : This is face detection model's training, evaluation and inference scripts in HuggingFace🤗 style from scratch for practice.
+Notice: This is face detection model's training, evaluation and inference scripts in HuggingFace🤗 style from scratch for practice.
 
 ## Train
 Run
