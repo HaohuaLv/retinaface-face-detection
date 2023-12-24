@@ -12,6 +12,8 @@ python train.py --model_config_file <MODEL_CONFIG_FILE>
 <MODEL_CONFIG_FILE> can be found in folder `config`.
 Model checkpoints will be saved in folder `checkpoints` by default.
 
+backbone-ResNet50 checkpoint can be download in my [google drive](https://drive.google.com/drive/folders/1teN75lXOvYPLdpzLoXPEPrsXfZJU18Id?usp=sharing).
+
 ## Inference
 ### Observe logits map and predicted bboxes
 Run
