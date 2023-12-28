@@ -1,4 +1,4 @@
-# [Retinaface Face Detection](https://github.com/HaohuaLv/retinaface-face-detection)
+# Retinaface Face Detection
 
 A retinaface model for Face Detection trained on widerface dataset.
 
@@ -31,5 +31,17 @@ python detect.py --checkpoint_path <CHECKPOINT_PATH> --image_path <IMAGE_PATH> -
 ```
 ![inference image](pic/detect_result.png)
 
+### AP Calculation
+Run
+```bash
+python calc_AP.py --checkpoint_path <CHECKPOINT_PATH>
+```
+ResNet50 Backbone (AP = 0.896)
+
+![inference image](pic/PR_curve-resnet50-AP0.896.svg)
+
+MobileNetv2_050 Backbone (AP = 0.828)
+
+![inference image](pic/PR_curve-mobilenetv2_050-AP0.828.svg)
 ## References
 - [Retinface-pytorch](https://github.com/biubug6/Pytorch_Retinaface)
