@@ -121,12 +121,14 @@ def _center_to_corners(bboxes_center: Tensor) -> Tensor:
     return bbox_corners
 
 
-def nms(bboxes: Tensor, confidences: Tensor, threshold: float = 0.4) -> Tensor:
-    sorted_bboxes = bboxes[confidences.sort().indices]
+def nms(bboxes: Tensor, confidences: Tensor, nms_threshold: float = 0.4, topk=5000) -> Tensor:
+    if topk > confidences.shape[0]:
+        topk = confidences.shape[0]
+    sorted_bboxes = bboxes[confidences.topk(k=topk).indices]
     i = 0
     while i < sorted_bboxes.shape[0]:
         iou = box_iou(_center_to_corners(sorted_bboxes[i].unsqueeze(0)), _center_to_corners(sorted_bboxes[i+1:]))[0].flatten()
-        drop_bboxes_indices = torch.where(iou >= threshold)[0] + i + 1
+        drop_bboxes_indices = torch.where(iou >= nms_threshold)[0] + i + 1
         sorted_bboxes = np.delete(sorted_bboxes, drop_bboxes_indices, axis=0)
         i += 1
     return sorted_bboxes
