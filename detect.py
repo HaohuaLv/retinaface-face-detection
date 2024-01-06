@@ -51,7 +51,7 @@ pred_logits = outputs["pred_logits"].softmax(dim=-1)[..., -1]
 pred_masks = pred_logits > 0.5
 pred_bboxes = outputs["pred_bboxes"]
 result_bboxes = pred_bboxes[pred_masks]
-result_bboxes = nms(result_bboxes, pred_logits[pred_masks], threshold=0.3)
+result_bboxes = nms(result_bboxes, pred_logits[pred_masks])
 result_bboxes = (result_bboxes * torch.tensor(image.size * 2)).type(torch.int64)
 result_bboxes = _center_to_corners(result_bboxes).tolist()
 
