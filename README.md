@@ -43,5 +43,13 @@ ResNet50 Backbone (AP = 0.896)
 MobileNetv2_050 Backbone (AP = 0.828)
 
 ![inference image](pic/PR_curve-mobilenetv2_050-AP0.828.svg)
+
+### Export to Onnx and Video test
+Run script `export_to_onnx.py` to export to onnx format. 
+
+Run script `video_test.py` like this
+
+![video_test_screenshot](pic/video_test_screenshot.png)
+
 ## References
 - [Retinface-pytorch](https://github.com/biubug6/Pytorch_Retinaface)
